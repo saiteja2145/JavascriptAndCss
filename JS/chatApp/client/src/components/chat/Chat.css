@@ -16,6 +16,18 @@
   width: 35%;
 }
 
+.clientContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 8px;
+  height: 60%;
+  width: 20%;
+  height: auto;
+  margin-left: 10rem;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .outerContainer {
     height: 100%;

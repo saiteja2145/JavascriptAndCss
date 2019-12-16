@@ -9,22 +9,33 @@ const addUser = ({ id, name, room }) => {
   );
 
   if (existingUser) {
-    return { error: 'Username taken' };
+    return {
+      error: "Username taken"
+    };
   }
 
-  const user = { id, name, room };
+  const user = {
+    id,
+    name,
+    room
+  };
   users.push(user);
 
-  return user;
+  return { user };
 };
 const removeuUser = id => {
   const index = users.findIndex(user => user.id === id);
 
   if (index !== -1) {
-    return index.splice(index, 1)[0];
+    return users.splice(index, 1)[0];
   }
 };
 const getUser = id => users.find(user => user.id === id);
 const getUserInRoom = room => users.filter(user => user.room === room);
 
-module.exports = { addUser, removeuUser, getUser, getUserInRoom };
+module.exports = {
+  addUser,
+  removeuUser,
+  getUser,
+  getUserInRoom
+};
