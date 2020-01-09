@@ -1,0 +1,23 @@
+.inputBoxContainer {
+    width: 80%;
+}
+
+.inputBox {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+    transition: all 0.4s ease;
+    outline: none;
+
+    &__label {
+        font-size: 2rem;
+        display: block;
+    }
+
+    &:focus {
+        border-bottom: 1px solid $color-primary-dark;
+    }
+}
